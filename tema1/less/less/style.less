@@ -1,13 +1,13 @@
 //DECLARANDO VARIABLES
-@color : #223344;
+@color : #445533;
 @width : 100px;
 @height : 100px;
 
 //CLASES
 .border-radius (@radius) {
   border-radius: @radius;
-  -moz-border-radius: @radius;
-  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius; //Firefox
+  -webkit-border-radius: @radius; //Chrome
 }
 
 .barra{
@@ -15,17 +15,23 @@
     height: @height;
     .border-radius(5px);
     box-shadow:2px 2px 5px #666;
-    margin-bottom: 20px;    
+    margin-bottom: 30px;    
     position: relative;
 }
 
 .mixi-frames () {
 	from {left: 0px;}
-	40% {left: 1024px;}
+	40% {left: 1024px;.border-radius(50px);.rotar(720deg);}
   55% {left: 600px;}
   to {left: 0px;}
 }
 
+.rotar(@rotacion : 360deg){
+  transform : rotate(@rotacion);
+	-moz-transform : rotate(@rotacion); // Firefox
+	-webkit-transform : rotate(@rotacion); // Chrome
+	-o-transform : rotate(@rotacion); // Opera
+}
 
 @-webkit-keyframes some-animation {.mixi-frames;}
 @-moz-keyframes some-animation {.mixi-frames;}

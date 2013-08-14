@@ -5,7 +5,7 @@
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   box-shadow: 2px 2px 5px #666;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
 }
 @-webkit-keyframes some-animation {
@@ -14,6 +14,13 @@
   }
   40% {
     left: 1024px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
   }
   55% {
     left: 600px;
@@ -28,6 +35,13 @@
   }
   40% {
     left: 1024px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
   }
   55% {
     left: 600px;
@@ -42,6 +56,13 @@
   }
   40% {
     left: 1024px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
   }
   55% {
     left: 600px;
@@ -56,6 +77,13 @@
   }
   40% {
     left: 1024px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
   }
   55% {
     left: 600px;
@@ -70,6 +98,13 @@
   }
   40% {
     left: 1024px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
   }
   55% {
     left: 600px;
@@ -79,7 +114,7 @@
   }
 }
 body {
-  background: #223344;
+  background: #445533;
 }
 body #barra1 {
   width: 100px;
@@ -88,13 +123,13 @@ body #barra1 {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   box-shadow: 2px 2px 5px #666;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
   animation: some-animation 20s infinite;
-  background: #090d11;
+  background: #1e2516;
 }
 body #barra1:hover {
-  background: #000000;
+  background: #040503;
 }
 body #barra2 {
   width: 100px;
@@ -103,13 +138,13 @@ body #barra2 {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   box-shadow: 2px 2px 5px #666;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
-  background: #133353;
+  background: #44691f;
   animation: some-animation 25s infinite;
 }
 body #barra2:hover {
-  background: #003366;
+  background: #448503;
 }
 body #barra3 {
   width: 100px;
@@ -118,11 +153,11 @@ body #barra3 {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   box-shadow: 2px 2px 5px #666;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
   animation: some-animation 40s infinite;
-  background: #3c5977;
+  background: #6a8550;
 }
 body #barra3:hover {
-  background: #4d7399;
+  background: #84a365;
 }
