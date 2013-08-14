@@ -1,0 +1,128 @@
+.barra {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 2px 2px 5px #666;
+  margin-bottom: 20px;
+  position: relative;
+}
+@-webkit-keyframes some-animation {
+  from {
+    left: 0px;
+  }
+  40% {
+    left: 1024px;
+  }
+  55% {
+    left: 600px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-moz-keyframes some-animation {
+  from {
+    left: 0px;
+  }
+  40% {
+    left: 1024px;
+  }
+  55% {
+    left: 600px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-ms-keyframes some-animation {
+  from {
+    left: 0px;
+  }
+  40% {
+    left: 1024px;
+  }
+  55% {
+    left: 600px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-o-keyframes some-animation {
+  from {
+    left: 0px;
+  }
+  40% {
+    left: 1024px;
+  }
+  55% {
+    left: 600px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@keyframes some-animation {
+  from {
+    left: 0px;
+  }
+  40% {
+    left: 1024px;
+  }
+  55% {
+    left: 600px;
+  }
+  to {
+    left: 0px;
+  }
+}
+body {
+  background: #223344;
+}
+body #barra1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 2px 2px 5px #666;
+  margin-bottom: 20px;
+  position: relative;
+  animation: some-animation 20s infinite;
+  background: #090d11;
+}
+body #barra1:hover {
+  background: #000000;
+}
+body #barra2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 2px 2px 5px #666;
+  margin-bottom: 20px;
+  position: relative;
+  background: #133353;
+  animation: some-animation 25s infinite;
+}
+body #barra2:hover {
+  background: #003366;
+}
+body #barra3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 2px 2px 5px #666;
+  margin-bottom: 20px;
+  position: relative;
+  animation: some-animation 40s infinite;
+  background: #3c5977;
+}
+body #barra3:hover {
+  background: #4d7399;
+}

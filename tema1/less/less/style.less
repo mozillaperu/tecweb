@@ -1,0 +1,60 @@
+//DECLARANDO VARIABLES
+@color : #223344;
+@width : 100px;
+@height : 100px;
+
+//CLASES
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.barra{
+    width: @width;
+    height: @height;
+    .border-radius(5px);
+    box-shadow:2px 2px 5px #666;
+    margin-bottom: 20px;    
+    position: relative;
+}
+
+.mixi-frames () {
+	from {left: 0px;}
+	40% {left: 1024px;}
+  55% {left: 600px;}
+  to {left: 0px;}
+}
+
+
+@-webkit-keyframes some-animation {.mixi-frames;}
+@-moz-keyframes some-animation {.mixi-frames;}
+@-ms-keyframes some-animation {.mixi-frames;}
+@-o-keyframes some-animation {.mixi-frames;}
+@keyframes some-animation {.mixi-frames;}
+
+
+body{
+  background: @color;  
+  
+  #barra1{
+    .barra;
+    animation: some-animation 20s infinite;
+    background: darken(@color, 15%); 
+    &:hover{background: darken(@color, 25%);}
+  }
+  
+  #barra2{
+    .barra;
+    background: saturate(@color, 30%);  
+    animation: some-animation 25s infinite;
+    &:hover{background: saturate(@color, 70%);}
+  }
+  
+  #barra3{
+    .barra;
+    animation: some-animation 40s infinite;
+    background: lighten(@color, 15%); 
+    &:hover{background: lighten(@color, 25%);}
+  }
+}
