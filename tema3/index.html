@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ember Starter Kit</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/foundation.min.css">
+</head>
+<body>
+
+  <script type="text/x-handlebars">
+    <h2>Welcome to Ember.js</h2>
+
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a class="brand" href="#">Home</a></h1>
+        </li>
+      </ul>
+      <secion class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li>{{#linkTo 'posts'}}Posts{{/linkTo}}</li>
+          <li class="divider"></li>
+          <li>{{#linkTo 'about'}}About{{/linkTo}}</li>
+          <li class="divider"></li>
+        </ul>
+      </section>
+    </nav>
+
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" id="about">
+    <div class='about'>
+      <p>emberjs blog example for CONEISC 2013</p>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" id="posts">
+    <ul class="small-block-grid-2">
+    {{#each model}}
+      {{#linkTo 'post' this}}<h3>{{title}} <small> by {{author}}</small></h3>{{/linkTo}}
+    {{/each}}
+    </ul>
+
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" id="post">
+    {{#if isEditing}}
+      {{partial 'post/edit'}}
+      <button {{action 'doneEditing'}}>Done</button>
+    {{else}}
+      <button {{action 'edit'}}>Edit</button>
+    {{/if}}
+    <h1>{{title}}</h1>
+    <p>{{intro}}</p>
+    <p>{{extended}}</p>
+  </script>
+
+  <script type="text/x-handlebars" id="posts/index">
+    <p>select post</p>
+  </script>
+
+  <script type="text/x-handlebars" id="post/_edit">
+    <p>{{view Ember.TextField valueBinding='title'}}</p>
+    <p>{{view Ember.TextField valueBinding='intro'}}</p>
+    <p>{{view Ember.TextField valueBinding='extended'}}</p>
+  </script>
+
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/handlebars-1.0.0.js"></script>
+  <script src="js/libs/ember-1.0.0-rc.7.js"></script>
+  <script src="js/libs/ember-data-latest.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
