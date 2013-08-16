@@ -1,0 +1,74 @@
+//DECLARANDO VARIABLES
+$color: #996655
+$width: 100px
+$height: 100px
+
+//CLASES
+@mixin border-radius ($radius)
+  border-radius: $radius
+  -moz-border-radius: $radius //Firefox
+  -webkit-border-radius: $radius //Chrome
+
+@mixin barra
+  width: $width
+  height: $height
+  @include border-radius(5px)
+  box-shadow: 2px 2px 5px darken($color, 90%)
+  margin-bottom: 30px
+  position: relative
+
+
+@mixin rotar($rotacion : 360deg, $scala: 0.8)
+  transform : rotate($rotacion) scale($scala)
+  -webkit-transform : rotate($rotacion) scale($scala) // Chrome
+  -moz-transform : rotate($rotacion) scale($scala) // Chrome
+  -o-transform : rotate($rotacion) scale($scala) // Opera
+
+
+@mixin cuadrados
+  from
+    left: 0px
+  40%
+    left: 1024px
+    @include border-radius(50px)
+    @include rotar(720deg, 0.75)
+    box-shadow: 6px 10px 8px darken($color, 90%)
+  55% 
+    left: 600px
+  to
+    left: 0px
+
+
+@-moz-keyframes some-animation
+  @include cuadrados
+@-ms-keyframes some-animation
+  @include cuadrados;
+@-o-keyframes some-animation
+  @include cuadrados;
+@keyframes some-animation
+  @include cuadrados;
+
+body
+  background: $color
+  
+  #barra1
+    @include barra
+    animation: some-animation 20s infinite
+    background: darken($color, 15%)
+    &:hover
+      background: darken($color, 25%)
+  
+  #barra2
+    @include barra
+    background: saturate($color, 30%)
+    animation: some-animation 25s infinite
+    &:hover
+      background: saturate($color, 70%)
+  
+  
+  #barra3
+    @include barra
+    animation: some-animation 40s infinite
+    background: lighten($color, 15%)
+    &:hover
+      background: lighten($color, 25%)
