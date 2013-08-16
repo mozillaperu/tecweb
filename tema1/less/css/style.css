@@ -4,7 +4,7 @@
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  box-shadow: 2px 2px 5px #666;
+  box-shadow: 2px 2px 5px #000000;
   margin-bottom: 30px;
   position: relative;
 }
@@ -17,10 +17,11 @@
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    transform: rotate(720deg);
-    -moz-transform: rotate(720deg);
-    -webkit-transform: rotate(720deg);
-    -o-transform: rotate(720deg);
+    transform: rotate(720deg) scale(0.75);
+    -moz-transform: rotate(720deg) scale(0.75);
+    -webkit-transform: rotate(720deg) scale(0.75);
+    -o-transform: rotate(720deg) scale(0.75);
+    box-shadow: 6px 10px 8px #000000;
   }
   55% {
     left: 600px;
@@ -38,10 +39,11 @@
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    transform: rotate(720deg);
-    -moz-transform: rotate(720deg);
-    -webkit-transform: rotate(720deg);
-    -o-transform: rotate(720deg);
+    transform: rotate(720deg) scale(0.75);
+    -moz-transform: rotate(720deg) scale(0.75);
+    -webkit-transform: rotate(720deg) scale(0.75);
+    -o-transform: rotate(720deg) scale(0.75);
+    box-shadow: 6px 10px 8px #000000;
   }
   55% {
     left: 600px;
@@ -59,10 +61,11 @@
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    transform: rotate(720deg);
-    -moz-transform: rotate(720deg);
-    -webkit-transform: rotate(720deg);
-    -o-transform: rotate(720deg);
+    transform: rotate(720deg) scale(0.75);
+    -moz-transform: rotate(720deg) scale(0.75);
+    -webkit-transform: rotate(720deg) scale(0.75);
+    -o-transform: rotate(720deg) scale(0.75);
+    box-shadow: 6px 10px 8px #000000;
   }
   55% {
     left: 600px;
@@ -80,10 +83,11 @@
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    transform: rotate(720deg);
-    -moz-transform: rotate(720deg);
-    -webkit-transform: rotate(720deg);
-    -o-transform: rotate(720deg);
+    transform: rotate(720deg) scale(0.75);
+    -moz-transform: rotate(720deg) scale(0.75);
+    -webkit-transform: rotate(720deg) scale(0.75);
+    -o-transform: rotate(720deg) scale(0.75);
+    box-shadow: 6px 10px 8px #000000;
   }
   55% {
     left: 600px;
@@ -101,10 +105,11 @@
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    transform: rotate(720deg);
-    -moz-transform: rotate(720deg);
-    -webkit-transform: rotate(720deg);
-    -o-transform: rotate(720deg);
+    transform: rotate(720deg) scale(0.75);
+    -moz-transform: rotate(720deg) scale(0.75);
+    -webkit-transform: rotate(720deg) scale(0.75);
+    -o-transform: rotate(720deg) scale(0.75);
+    box-shadow: 6px 10px 8px #000000;
   }
   55% {
     left: 600px;
@@ -114,7 +119,7 @@
   }
 }
 body {
-  background: #445533;
+  background: #996655;
 }
 body #barra1 {
   width: 100px;
@@ -122,14 +127,14 @@ body #barra1 {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  box-shadow: 2px 2px 5px #666;
+  box-shadow: 2px 2px 5px #000000;
   margin-bottom: 30px;
   position: relative;
   animation: some-animation 20s infinite;
-  background: #1e2516;
+  background: #68453a;
 }
 body #barra1:hover {
-  background: #040503;
+  background: #472f27;
 }
 body #barra2 {
   width: 100px;
@@ -137,14 +142,14 @@ body #barra2 {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  box-shadow: 2px 2px 5px #666;
+  box-shadow: 2px 2px 5px #000000;
   margin-bottom: 30px;
   position: relative;
-  background: #44691f;
+  background: #bd5431;
   animation: some-animation 25s infinite;
 }
 body #barra2:hover {
-  background: #448503;
+  background: #ec3c02;
 }
 body #barra3 {
   width: 100px;
@@ -152,12 +157,12 @@ body #barra3 {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  box-shadow: 2px 2px 5px #666;
+  box-shadow: 2px 2px 5px #000000;
   margin-bottom: 30px;
   position: relative;
   animation: some-animation 40s infinite;
-  background: #6a8550;
+  background: #b98f81;
 }
 body #barra3:hover {
-  background: #84a365;
+  background: #cbaca2;
 }

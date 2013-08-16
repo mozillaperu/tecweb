@@ -1,5 +1,5 @@
 //DECLARANDO VARIABLES
-@color : #445533;
+@color : #996655;
 @width : 100px;
 @height : 100px;
 
@@ -14,31 +14,31 @@
     width: @width;
     height: @height;
     .border-radius(5px);
-    box-shadow:2px 2px 5px #666;
+    box-shadow:2px 2px 5px darken(@color, 90%);
     margin-bottom: 30px;    
     position: relative;
 }
 
-.mixi-frames () {
+.rotar(@rotacion : 360deg, @scala: 0.8){
+  transform : rotate(@rotacion) scale(@scala);
+	-moz-transform : rotate(@rotacion) scale(@scala); // Firefox
+	-webkit-transform : rotate(@rotacion) scale(@scala); // Chrome
+	-o-transform : rotate(@rotacion) scale(@scala); // Opera
+}
+
+.cuadrados () {
 	from {left: 0px;}
-	40% {left: 1024px;.border-radius(50px);.rotar(720deg);}
+	40% {left: 1024px;.border-radius(50px);.rotar(720deg, 0.75);
+    box-shadow:6px 10px 8px darken(@color, 90%);}
   55% {left: 600px;}
   to {left: 0px;}
 }
 
-.rotar(@rotacion : 360deg){
-  transform : rotate(@rotacion);
-	-moz-transform : rotate(@rotacion); // Firefox
-	-webkit-transform : rotate(@rotacion); // Chrome
-	-o-transform : rotate(@rotacion); // Opera
-}
-
-@-webkit-keyframes some-animation {.mixi-frames;}
-@-moz-keyframes some-animation {.mixi-frames;}
-@-ms-keyframes some-animation {.mixi-frames;}
-@-o-keyframes some-animation {.mixi-frames;}
-@keyframes some-animation {.mixi-frames;}
-
+@-webkit-keyframes some-animation {.cuadrados;}
+@-moz-keyframes some-animation {.cuadrados;}
+@-ms-keyframes some-animation {.cuadrados;}
+@-o-keyframes some-animation {.cuadrados;}
+@keyframes some-animation {.cuadrados;}
 
 body{
   background: @color;  
