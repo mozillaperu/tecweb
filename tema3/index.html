@@ -10,13 +10,14 @@
 <body>
 
   <script type="text/x-handlebars">
-    <h2>Welcome to Ember.js</h2>
+    <h2>Building Firefox OS</h2>
 
     <nav class="top-bar">
       <ul class="title-area">
         <li class="name">
           <h1><a class="brand" href="#">Home</a></h1>
         </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
       <section class="top-bar-section">
         <ul class="right">
@@ -33,28 +34,25 @@
   </script>
 
   <script type="text/x-handlebars" id="about">
-    <div class='about'>
-      <p>emberjs blog example for CONEISC 2013</p>
+    <div class='about content'>
+      <p>a emberjs blog example</p>
     </div>
   </script>
 
   <script type="text/x-handlebars" id="posts">
-    <ul class="small-block-grid-2">
+    <div class="aside">
     {{#each model}}
-      {{#linkTo 'post' this}}<h3>{{title}} <small> by {{author}}</small></h3>{{/linkTo}}
+    {{#linkTo 'post' this}}<h3>{{title}}<small> by {{author}}</small></h3>{{/linkTo}}
     {{/each}}
-    </ul>
+    </div>
 
+    <ul class="content">
     {{outlet}}
+    </ul>
   </script>
 
   <script type="text/x-handlebars" id="post">
-    {{#if isEditing}}
-      {{partial 'post/edit'}}
-      <button {{action 'doneEditing'}}>Done</button>
-    {{else}}
-      <button {{action 'edit'}}>Edit</button>
-    {{/if}}
+    {{#linkTo 'post.edit' post}}Edit{{/linkTo}}
     <h1>{{title}}</h1>
     <p>{{intro}}</p>
     <p>{{extended}}</p>
@@ -64,10 +62,11 @@
     <p>select post</p>
   </script>
 
-  <script type="text/x-handlebars" id="post/_edit">
+  <script type="text/x-handlebars" id="post/edit">
     <p>{{view Ember.TextField valueBinding='title'}}</p>
     <p>{{view Ember.TextField valueBinding='intro'}}</p>
     <p>{{view Ember.TextField valueBinding='extended'}}</p>
+    {{#linkTo 'post' this}}back{{/linkTo}}
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>
